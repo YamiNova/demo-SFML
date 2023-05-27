@@ -2,7 +2,9 @@
 #include <SFML/Audio.hpp>
 
 int main(){
+    // create the main window
     sf::RenderWindow window(sf::VideoMode(500, 600), "SFML works!");
+    
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Red);
 
