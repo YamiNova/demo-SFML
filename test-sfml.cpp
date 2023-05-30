@@ -3,10 +3,21 @@
 
 int main(){
     // create the main window
-    sf::RenderWindow window(sf::VideoMode(500, 600), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(1366, 768), "SFML window");
+
+    sf::Texture texture;
+    if (!texture.loadFromFile("resource/picture/BTS.jpg"))
+        return EXIT_FAILURE;
+    sf::Sprite sprite(texture);
+
+    sf::Music music;
+    if (!music.openFromFile("resource/music/Come-On.wav"))
+        return EXIT_FAILURE;
     
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Red);
+
+    music.play();
 
     while (window.isOpen())
     {
@@ -18,6 +29,7 @@ int main(){
         }
         window.clear();
         window.draw(shape);
+        window.draw(sprite);
         window.display();
     }
     return 0;
