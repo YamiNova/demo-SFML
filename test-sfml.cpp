@@ -4,8 +4,8 @@
 
 int main(){
     sf::Clock clock;
-    sf::Time time1 = clock.getElapsedTime();
-    std::cout << "current time: " << time1.asMilliseconds() << " ms" << std::endl;
+    sf::Time startTime = clock.getElapsedTime();
+    std::cout << "start time: " << startTime.asMilliseconds() << " ms" << std::endl;
 
     // create the main window
     sf::RenderWindow window(sf::VideoMode(1366, 768), "SFML window");
