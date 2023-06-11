@@ -8,6 +8,9 @@ int main(){
     sf::Time startTime = clock.getElapsedTime();
     std::cout << "start time: " << startTime.asMilliseconds() << " ms" << std::endl;
 
+    sf::Http http;
+    http.setHost("http://www.baidu.com/");
+
     // create the main window
     sf::RenderWindow window(sf::VideoMode(1366, 768), "SFML window");
 
