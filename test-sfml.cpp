@@ -10,6 +10,10 @@ int main(){
 
     sf::Http http;
     http.setHost("http://www.baidu.com/");
+    sf::Http::Request request;
+    sf::Http::Response response = http.sendRequest(request);
+    std::cout << "status: " << response.getStatus() << std::endl;
+
     
 
     // create the main window
