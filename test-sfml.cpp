@@ -4,10 +4,12 @@
 #include <SFML/Network.hpp>
 
 int main(){
+    // time
     sf::Clock clock;
     sf::Time startTime = clock.getElapsedTime();
     std::cout << "start time: " << startTime.asMilliseconds() << " ms" << std::endl;
 
+    // network
     sf::Http http;
     http.setHost("http://www.baidu.com/");
     sf::Http::Request request;
